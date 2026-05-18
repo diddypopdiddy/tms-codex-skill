@@ -1,0 +1,28 @@
+name: Validate Skill Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate required files
+        run: |
+          test -f skills/tms-setup/SKILL.md
+          test -f skills/tms-setup/agents/openai.yaml
+          test -f skills/tms-setup/scripts/create_tms_workspace.py
+          test -f skills/tms-setup/references/setup_workflow.md
+      - name: Run workspace smoke test
+        run: |
+          python3 skills/tms-setup/scripts/create_tms_workspace.py /tmp/tms-skill-smoke --force
+          test -f /tmp/tms-skill-smoke/00_Start_Here/setup_status.md
+          test -f /tmp/tms-skill-smoke/source_docs/source_index.md
+          test -f /tmp/tms-skill-smoke/03_Classes_And_Periods/period_status_snapshot.csv
+

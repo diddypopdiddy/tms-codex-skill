@@ -1,0 +1,8 @@
+interface:
+  display_name: "TMS OS"
+  short_description: "Set up and run a teacher TMS"
+  brand_color: "#2563EB"
+  default_prompt: "Use $tms-setup to set up and run my local teaching management system workspace."
+
+policy:
+  allow_implicit_invocation: true
