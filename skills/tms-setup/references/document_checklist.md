@@ -9,6 +9,7 @@ Ask for documents in practical batches. Do not make upload completion a blocker 
 - Approximate period length.
 - Current unit/topic.
 - Teacher's preferred lesson rhythm.
+- Whether digital exit tickets should use live Google Forms.
 
 ## High-Value Uploads
 
@@ -23,6 +24,17 @@ Ask for documents in practical batches. Do not make upload completion a blocker 
 - Equipment/lab rules.
 - Media-release or publication rules.
 - District AI/data-use policy.
+- Google Workspace/Form collection rules, if available.
+
+## Access Checks
+
+For live student-facing digital artifacts, confirm:
+
+- The teacher is signed into the correct Google account in Chrome.
+- Google Forms can be created in that account.
+- Student responder links can be posted in the LMS.
+- Verified email collection and one-response limits are allowed by school policy.
+- File upload/photo evidence is approved before using it.
 
 ## Optional Later Uploads
 
@@ -50,4 +62,3 @@ Use plain language:
 ```text
 Upload the syllabus or course outline first. If you do not have that handy, paste the course name, current unit, and what students did last class.
 ```
-
