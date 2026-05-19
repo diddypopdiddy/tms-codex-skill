@@ -19,6 +19,7 @@ Check whether these folders exist:
 - `08_Student_Artifacts`
 - `source_docs`
 - `outputs`
+- `skills`
 
 If not, run the workspace creation script.
 
@@ -62,16 +63,16 @@ Each uploaded file should be placed under `source_docs/teacher_uploads/` or anot
 Ask:
 
 ```text
-What should most of your lessons include by default: Do Now, agenda, mini lesson, student work, exit ticket, homework, or something else?
+What should most of your lessons include by default: Do Now, agenda, mini lesson, student work, exit ticket, homework, Google Form exit ticket, or something else?
 ```
 
 Update `05_Teacher_Profile/global_defaults.md`.
 
 ## Phase 6: Data Boundaries
 
-Before rosters, grades, accommodations, behavior notes, or Google Forms responses are processed, read `privacy_and_policy.md`.
+Before rosters, grades, accommodations, behavior notes, Google Forms responses, uploaded student work, or image analysis are processed, read `privacy_and_policy.md`.
 
-If policy is missing, planning can continue, but student-specific analysis should stay blocked.
+If policy is missing, planning and artifact creation can continue, but student-specific analysis should stay blocked.
 
 ## Phase 7: First Proof
 
@@ -83,6 +84,14 @@ What is the first class or topic you want to plan for?
 
 Generate one daily workspace and snapshot in `outputs/`. Keep it practical and short.
 
+If the first proof includes digital collection:
+
+1. Create a durable artifact spec under `08_Student_Artifacts/`.
+2. Create the live Google Form when authenticated Google access is available.
+3. Capture teacher edit link, student responder link, and linked response Sheet URL when available.
+4. Update the workspace, snapshot, registry, and artifact spec with the real links.
+5. If live creation is unavailable, leave a Forms-ready spec and clear not-created status.
+
 ## Phase 8: Handoff
 
 End setup by naming:
@@ -90,5 +99,16 @@ End setup by naming:
 - Workspace created.
 - Files updated.
 - Missing inputs.
+- Whether live Google Form creation is available.
 - First planning command the teacher can use tomorrow.
 
+## Ongoing Loop
+
+After setup, use the same loop:
+
+1. Plan next class from source docs, teacher defaults, and class memory.
+2. Generate the daily workspace and snapshot.
+3. Create student artifacts for print or digital collection.
+4. Keep raw student responses in durable approved systems.
+5. Summarize response patterns only when asked and only under the current data-use boundary.
+6. Save teacher-approved aggregate evidence to class memory when the teacher asks to carry it forward.
