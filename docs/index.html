@@ -15,9 +15,7 @@
         --bg: #f7f9fc;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       body {
         margin: 0;
@@ -37,9 +35,7 @@
         margin: 0 auto;
       }
 
-      .hero {
-        padding: 72px 0 56px;
-      }
+      .hero { padding: 72px 0 56px; }
 
       h1 {
         margin: 0 0 16px;
@@ -49,24 +45,15 @@
       }
 
       .lede {
-        max-width: 760px;
+        max-width: 780px;
         margin: 0;
         font-size: 1.25rem;
         color: var(--muted);
       }
 
-      main {
-        padding: 40px 0 64px;
-      }
-
-      section {
-        margin: 0 0 36px;
-      }
-
-      h2 {
-        margin: 0 0 12px;
-        font-size: 1.35rem;
-      }
+      main { padding: 40px 0 64px; }
+      section { margin: 0 0 36px; }
+      h2 { margin: 0 0 12px; font-size: 1.35rem; }
 
       .grid {
         display: grid;
@@ -81,20 +68,9 @@
         padding: 18px;
       }
 
-      .card h3 {
-        margin: 0 0 8px;
-        font-size: 1rem;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      code,
-      pre {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      }
+      .card h3 { margin: 0 0 8px; font-size: 1rem; }
+      .card p { margin: 0; color: var(--muted); }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 
       pre {
         overflow-x: auto;
@@ -112,13 +88,8 @@
       }
 
       @media (max-width: 760px) {
-        .grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero {
-          padding: 48px 0 40px;
-        }
+        .grid { grid-template-columns: 1fr; }
+        .hero { padding: 48px 0 40px; }
       }
     </style>
   </head>
@@ -126,7 +97,7 @@
     <header>
       <div class="wrap hero">
         <h1>TMS Codex Skill</h1>
-        <p class="lede">An installable Codex skill that turns a blank teacher folder into a local Teaching Management System workspace, then supports the daily plan-present-collect-log loop.</p>
+        <p class="lede">An installable Codex skill that turns a blank teacher folder into a local Teaching Management System workspace, then supports the daily plan-present-create-form-read-evidence-log loop.</p>
       </div>
     </header>
 
@@ -147,6 +118,7 @@
         <h2>Daily Use</h2>
         <pre>Use $tms-setup to plan tomorrow.
 Use $tms-setup to make an exit ticket.
+Use $tms-setup to analyze exit ticket responses.
 Use $tms-setup to log what happened today.</pre>
         <p>The same skill continues after setup, using the local project files as the teacher's source of truth.</p>
       </section>
@@ -157,12 +129,12 @@ Use $tms-setup to log what happened today.</pre>
           <p>Uses uploaded curriculum, schedule, policy, and course files before making school-specific claims.</p>
         </div>
         <div class="card">
-          <h3>Teacher-first</h3>
-          <p>Creates practical planning defaults, class shells, artifact templates, and daily workspaces.</p>
+          <h3>Student-facing</h3>
+          <p>Creates live Google Forms and linked response Sheets when authenticated Google access is available.</p>
         </div>
         <div class="card">
           <h3>Policy-aware</h3>
-          <p>Marks missing student-data boundaries instead of processing sensitive evidence by default.</p>
+          <p>Keeps raw student evidence in durable approved systems and writes back aggregate summaries by default.</p>
         </div>
       </section>
 
