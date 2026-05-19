@@ -1,6 +1,6 @@
 ---
 name: tms-setup
-description: Set up and operate a teacher's local TMS OS workspace in Codex. Use when a teacher wants to get started with a Teaching Management System, initialize a TMS folder, upload school/course documents, create class shells, define teacher defaults, preserve missing inputs, set student-data boundaries, generate daily classroom workspaces, create student artifact specs, or log what happened after class.
+description: Set up and operate a teacher's local TMS OS workspace in Codex. Use when a teacher wants to get started with a Teaching Management System, initialize a TMS folder, upload school/course documents, create class shells, define teacher defaults, preserve missing inputs, set student-data boundaries, generate daily classroom workspaces, create live Google Forms or student artifact specs, analyze collected response summaries, or log what happened after class.
 ---
 
 # TMS Setup
@@ -25,6 +25,8 @@ Use when the teacher says:
 - "Plan tomorrow."
 - "Make the board."
 - "Make an exit ticket."
+- "Make it a Google Form."
+- "Analyze exit ticket responses."
 - "Log what happened today."
 
 ## Core Setup Flow
@@ -44,8 +46,9 @@ Use when the teacher says:
 
 - `references/setup_workflow.md` for the full setup sequence.
 - `references/document_checklist.md` for what to ask teachers to upload.
-- `references/privacy_and_policy.md` before handling student-identifiable data, Google Forms, rosters, grades, or accommodations.
+- `references/privacy_and_policy.md` before handling student-identifiable data, Google Forms responses, rosters, grades, accommodations, or uploaded student work.
 - `references/daily_workspace_contract.md` before generating the first classroom workspace.
+- `references/google_forms_student_artifacts.md` before creating live Google Forms, response Sheets, or response summaries.
 
 ## Workspace Creation
 
@@ -61,7 +64,9 @@ After creation, read:
 
 1. `00_Start_Here/README.md`
 2. `00_Start_Here/setup_status.md`
-3. `06_Class_Memory/missing_inputs_for_live_use.md`
+3. `00_Start_Here/codex_native_daily_workspace_spec.md`
+4. `06_Class_Memory/missing_inputs_for_live_use.md`
+5. `08_Student_Artifacts/student_artifact_delivery_spec.md`
 
 Then continue the setup interview.
 
@@ -91,19 +96,23 @@ Do not invent:
 - Student names.
 - Media-release status.
 - AI/data-use permission.
-- Google Forms or LMS links.
+- Google Forms, response Sheet, or LMS links.
 
 ## Required Write Targets
 
 Update or create these files during setup:
 
 - `00_Start_Here/setup_status.md`
+- `00_Start_Here/codex_native_daily_workspace_spec.md`
 - `01_School_Context/school_profile.md`
 - `01_School_Context/source_claims_and_limits.md`
 - `02_Master_Curriculum/course_index.md`
 - `03_Classes_And_Periods/period_status_snapshot.csv`
 - `05_Teacher_Profile/global_defaults.md`
 - `06_Class_Memory/missing_inputs_for_live_use.md`
+- `07_Artifact_Templates/daily_workspace_template.md`
+- `08_Student_Artifacts/student_artifact_delivery_spec.md`
+- `08_Student_Artifacts/student_artifact_registry.csv`
 - `source_docs/source_index.md`
 
 Create class-specific files only when enough course/period context exists:
@@ -130,8 +139,11 @@ The workspace should include:
 - Source mode.
 - Missing-context note.
 - Print and present controls.
+- Student artifact links or placeholders when relevant.
 
-If the teacher wants digital collection, create a Google Forms-ready artifact spec. Only mark a live form as created after real edit/responder links exist.
+If the teacher wants digital collection, create the live Google Form when an authenticated Google path is available. Capture the teacher edit link, student responder link, and response Sheet link, then write them back into the workspace, snapshot, artifact spec, and registry. Only mark a live form as created after real links exist.
+
+If live Google Form creation is unavailable, create a Google Forms-ready artifact spec and clearly mark the live form as not created.
 
 ## Ongoing Daily Use
 
@@ -140,8 +152,10 @@ After setup, keep using this skill for the recurring teacher loop:
 1. Plan the next class from source docs, teacher defaults, and class memory.
 2. Generate a daily workspace and snapshot in `outputs/`.
 3. Create printable or digital student artifacts when useful.
-4. Keep durable student-artifact metadata in `08_Student_Artifacts/`.
-5. After class, update class memory only when the teacher asks to save or carry forward what happened.
+4. For `google_form_collect`, create the live Google Form when Chrome/authenticated Google access or a Forms API path is available.
+5. Keep durable student-artifact metadata in `08_Student_Artifacts/`.
+6. Analyze responses only when asked and summarize aggregate patterns by default.
+7. After class, update class memory only when the teacher asks to save or carry forward what happened.
 
 For "plan tomorrow" or similar requests, do not answer with only a Markdown lesson unless the teacher explicitly asks for text-only output. Create the daily workspace files first.
 
@@ -154,5 +168,6 @@ Keep setup updates short:
 1. What was created or updated.
 2. What the teacher should upload or answer next.
 3. Whether the workspace is ready for first planning.
+4. If a live Google Form was created, include the teacher edit link, student responder link, and response Sheet link.
 
 Do not paste raw student data in chat.
